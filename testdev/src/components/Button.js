@@ -6,9 +6,13 @@ export default class Button extends React.Component {
     handleClick = () => {
       this.setState({counter: this.state.counter +1})
     }
+    
     render(){
+        if(this.state.counter===5) {
+        throw new Error('Za duza liczba');
+      }
       return <button onClick={this.handleClick}>
-                {this.props.label} {this.state.counter}
+                {this.props.label} <span>{this.state.counter}</span>
               </button>;
     }
   }
