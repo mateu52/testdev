@@ -19,3 +19,14 @@ describe('testing with jest', () => {
         expect(names.length).toBe(2);
      });
 });
+
+describe('Button component', () => {
+    //czy komponent działa
+    it('should renders ok'() => {
+
+    })
+    //spr czy licznik sie zwiekszy
+    it('should increment counter', () => {
+        
+    })
+})
