@@ -1,7 +1,6 @@
 import './App.css';
 import React, {useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import ErrorBoundary from './ErrorBoundary';
 import Button from './components/Button';
 
 
@@ -31,8 +30,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-    <ErrorBoundary>
-    <Button label="Click me" />
+    <Button  />
     {/*{users && users.map((user) => 
       <User key={user.login.uuid} 
         firstName={user.name.first}
@@ -42,7 +40,6 @@ function App() {
       />
     )}
     */}
-      </ErrorBoundary>
       </div>
   );
 }
