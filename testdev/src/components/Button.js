@@ -5,10 +5,18 @@ function Button(start){
     // if({start}!==0){
     //   setSum({start});
     // }
+    const btn=(event)=>{
+      if(event.target.value==="+"){
+        setSum(sum+1);
+      }
+      if(event.target.value==="-"){
+        setSum(sum-1);
+      }
+    }
   return(
     <div>
-      <button type="button">+</button>
-      <button type="button">-</button>
+      <button onClick={btn} type="button" value="+">+</button>
+      <button onClick={btn} type="button" value="-">-</button>
 
 
       <h3>wynik: {sum} as</h3>
