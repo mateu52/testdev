@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Button({start1}){
     const [sum,setSum]= useState(start1);
     const [inp, setInp]=useState();
-    
+
     const btn=(event)=>{
       if(event.target.value==="+"){
         setSum(sum+1);
@@ -21,6 +21,9 @@ function Button({start1}){
       event.preventDefault();
       setSum(inp);
     }
+    const hReset=()=>{
+      setSum(0);
+    }
   return(
     <div>
       <button onClick={btn} type="button" value="+" className='plus'>+</button>
@@ -31,7 +34,9 @@ function Button({start1}){
         <button type='submit' value="Submit">Zmień</button>
       </form>
 
-      <h3>wynik: {sum} as</h3>
+      <h3>wynik: {sum} </h3>
+      <button onClick={hReset}>reset</button>
+      <h4>props: {start1}</h4>
     </div> 
   )
 }
