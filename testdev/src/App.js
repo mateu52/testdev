@@ -30,7 +30,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-    <Button  />
+    <Button />
     {/*{users && users.map((user) => 
       <User key={user.login.uuid} 
         firstName={user.name.first}
